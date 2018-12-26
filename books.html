@@ -4,7 +4,7 @@
 	<title>Books</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet"id="A" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
 </head>
 <body>
@@ -16,57 +16,62 @@
 
 	<div class="row justify-content-center">
 		<div class="col-md-12">
-			<div class="col-md-6">
-				
-				<div class="row justify-content-center">      
-					<div class="col-md-4 bg-info badge-info badge text-light">Book title</div>   		    
-					<div class="col-md-4 bg-info  text-light"> <input class="input-group-text" type="text" name="Book title"> </div>     
-				</div>
-				<div class="row justify-content-center">      
-					<div class="col-md-4 bg-info badge-info badge text-light">Book subtitle</div>         
-					<div class="col-md-4 bg-info  text-light"><input class="input-group-text" type="text" name="Book subtitle"></div>     
-				</div>
-				<div class="row justify-content-center">      
-					<div class="col-md-4 bg-info badge-info badge text-light">Author name</div>           
-					<div class="col-md-4 bg-info  text-light"><input class="input-group-text" type="text" name="Author name"></div>     
-				</div>
-				<div class="row justify-content-center">      
-					<div class="col-md-4 bg-info badge-info badge text-light">Background color</div>      
-					<div class="col-md-4 bg-info  text-light"><input class="input-group-text" type="text" name="Background color"></div>     
-				</div>
-				<div class="row justify-content-center">      
-					<div class="col-md-4 bg-info badge-info badge text-light">Publisher</div>        	    
-					<div class="col-md-4 bg-info  text-light"><input class="input-group-text" type="text" name="Publisher" class="input-group-text"></div>     
-				</div>
-				<div class="row justify-content-center">      
-					<div class="col-md-4 bg-info badge-info badge text-light">Publishing year</div>       
-					<div class="col-md-4 bg-info  text-light">
-							<select name="year" class="custom-select">
-								<option value="2001">2001</option>
-								<option value="2002">2002</option>
-								<option value="2003">2003</option>
-								<option value="2004">2004</option>
-								<option value="2005">2005</option>
-								<option value="2006">2006</option>
-								<option value="2007">2007</option>
-								<option value="2008">2008</option>
-								<option value="2009">2009</option>
-								<option value="2010">2010</option>
-							</select>
-					</div>     
-				</div>
-				<div class="row justify-content-center ">
-					<div class="col-md-4">
-						<button type="button" class="btn btn-info Generate align-self-center"onclick="Generate()"> Generate
-						</button>
-					</div>
+			<div class="row">
+				<div class="col-md-6">
 					
+					<div class="row justify-content-center">      
+						<div class="col-md-4 bg-info badge-info badge text-light">Book title</div>   		    
+						<div class="col-md-4 bg-info  text-light"><input class="input-group-text text-light" id="a" type="text" name="Book title"></div>     
+					</div>
+					<div class="row justify-content-center">      
+						<div class="col-md-4 bg-info badge-info badge text-light">Book subtitle</div>         
+						<div class="col-md-4 bg-info  text-light"><input class="input-group-text text-light"id="B" type="text" name="Book subtitle"></div>     
+					</div>
+					<div class="row justify-content-center">      
+						<div class="col-md-4 bg-info badge-info badge text-light">Author name</div>           
+						<div class="col-md-4 bg-info  text-light"><input class="input-group-text text-light"id="C" type="text" name="Author name"></div>     
+					</div>
+					<div class="row justify-content-center">      
+						<div class="col-md-4 bg-info badge-info badge text-light">Background color</div>      
+						<div class="col-md-4 bg-info  text-light"><input class="input-group-text text-light"id="D" type="text" name="Background color"></div>     
+					</div>
+					<div class="row justify-content-center">      
+						<div class="col-md-4 bg-info badge-info badge text-light">Publisher</div>        	    
+						<div class="col-md-4 bg-info  text-light"><input class="input-group-text text-light"id="E" type="text" name="Publisher" class="input-group-text"></div>     
+					</div>
+					<div class="row justify-content-center">      
+						<div class="col-md-4 bg-info badge-info badge text-light">Publishing year</div>       
+						<div class="col-md-4 bg-info  text-light">
+								<select name="year" class="custom-select" id="F">
+									<option value="2001">2001</option>
+									<option value="2002">2002</option>
+									<option value="2003">2003</option>
+									<option value="2004">2004</option>
+									<option value="2005">2005</option>
+									<option value="2006">2006</option>
+									<option value="2007">2007</option>
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+								</select>
+						</div>     
+					</div>
+					<div class="row justify-content-center ">
+						<div class="col-md-4">
+							<button type="button" class="btn btn-info Generate align-self-center"onclick="Generate()"> Generate
+							</button>
+						</div>
+						
+					</div>
 				</div>
-			</div>
 
 
-			<div class="col-md-6">
-				
+				<div class="col-md-6" >
+
+					<div  class ="align-middle text-center text-light col-md-4" id="demo">
+						This is The Book
+					</div>
+				</div>
 			</div>
 		</div>
 		<footer class="justify-content-center">
@@ -77,5 +82,14 @@
 
 </div>
 		</div></div>
+
+		<script src="http://chancejs.com/chance.min.js"></script> <!-- chance library -->
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script> <!-- jquery library -->
+
+		<script src="js/bootstrap.min.js"></script> <!-- bootstrap library -->
+		<script src="main.js"></script> 
 </body>
 </html>
